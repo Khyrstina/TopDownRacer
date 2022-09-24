@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.distance = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.player = new System.Windows.Forms.PictureBox();
             this.trophy = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.MXP = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roadTrack1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roadTrack2)).BeginInit();
@@ -50,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.explosion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trophy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MXP)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -191,11 +194,22 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
+            // MXP
+            // 
+            this.MXP.Enabled = true;
+            this.MXP.Location = new System.Drawing.Point(255, 524);
+            this.MXP.Name = "MXP";
+            this.MXP.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("MXP.OcxState")));
+            this.MXP.Size = new System.Drawing.Size(75, 23);
+            this.MXP.TabIndex = 5;
+            this.MXP.Tag = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 656);
+            this.Controls.Add(this.MXP);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -213,6 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.explosion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trophy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MXP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +248,7 @@
         private System.Windows.Forms.PictureBox roadTrack2;
         private System.Windows.Forms.PictureBox roadTrack1;
         private System.Windows.Forms.Timer gameTimer;
+        private AxWMPLib.AxWindowsMediaPlayer MXP;
     }
 }
 
