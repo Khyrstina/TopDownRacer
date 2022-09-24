@@ -303,11 +303,18 @@ namespace TopDownRacer
             {
                 trophy.Image = Properties.Resources.gold;
             }
+            playSound(); //plays the hit sound
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Reset();
+        }
+        
+        private void playSound()
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"hit.wav");
+            player.Play();
         }
     }
 }
