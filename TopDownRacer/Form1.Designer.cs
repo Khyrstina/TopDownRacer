@@ -82,6 +82,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "START";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -187,7 +188,7 @@
             // gameTimer
             // 
             this.gameTimer.Enabled = true;
-            this.gameTimer.Interval = 10;
+            this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // Form1
@@ -202,6 +203,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Car Racing Game";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.moveCar);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.stopCar);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roadTrack1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roadTrack2)).EndInit();
