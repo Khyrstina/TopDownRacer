@@ -70,8 +70,8 @@ public partial class Form1 : Form
         // start the timer
         gameTimer.Start();
 
-
-    }
+            MXP.Ctlcontrols.play(); // music restarts when game is reset
+        }
 
     private void gameTimer_Tick(object sender, EventArgs e)
     {
