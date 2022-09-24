@@ -153,7 +153,12 @@ public partial class Form1 : Form
             roadSpeed = 8;
         }
 
-        else if (Score > 1200)
+            if (Score > 1000 && Score < 2000)
+            {
+                trafficSpeed = 8;
+                roadSpeed = 9;
+            }
+            else if (Score > 2000)
         {
             trafficSpeed = 9;
             roadSpeed = 10;
